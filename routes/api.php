@@ -15,3 +15,8 @@
  * Registration
  */
 Route::post('register', 'AuthController@create');
+
+/*
+ * Authentication
+ */
+Route::post('authorize', 'AuthController@login');
