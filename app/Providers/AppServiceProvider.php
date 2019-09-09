@@ -15,6 +15,11 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         Schema::defaultStringLength(255);
+
+        $this->app->bind(
+            'Api\Repositories\Interfaces\UserRepositoryInterface',
+            'Api\Repositories\UserRepository'
+        );
     }
 
     /**
